@@ -4,7 +4,10 @@ Barkley model [1] is an example of diffusion-reaction equations, which have wide
  $$ \frac{\partial u}{\partial t} = f(u,v) + \nabla^2 u   $$
  $$ \frac{\partial v}{\partial t} = g(u,v) $$
 
-$$\frac{\partial h}{\partial t} + \frac{\partial F_h}{\partial x} + \frac{\partial G_h}{\partial y} = 0$$
+where $f(u,v)$ and $g(u,v)$ are the production (reaction) terms of the two chemical species. In the Barkley model, we choose
+
+$$f(u,v) = \frac1{\epsilon}u(1-u)\left(u-\frac{v+b}{a}\right)$$
+$$g(u,v) = u - v$$
 
 
 [1]  Dwight Barkley (2008), Scholarpedia, 3(11):1877, http://www.scholarpedia.org/article/Barkley_model
