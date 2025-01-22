@@ -26,5 +26,5 @@ $$\frac{\partial u}{\partial y} = 0$$
 We will begin the simulation with the two species initially separated and located in the top ($u$) and bottom ($v$) part of the domain:
 
 $$ u(x,y) = \begin{cases}  1& \text{if } y 
-\geq 0 \\ 0 & \text{if } y<0 \end{cases} $$
+\geq 0 \newline 0 & \text{if } y<0 \end{cases} $$
 
