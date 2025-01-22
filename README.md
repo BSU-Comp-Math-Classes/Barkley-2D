@@ -6,7 +6,7 @@ Barkley model [1] is an example of diffusion-reaction equations, which have wide
 
 where $f(u,v)$ and $g(u,v)$ are the production (reaction) terms of the two chemical species. In the Barkley model, we choose
 
-$$f(u,v) = \frac1{\epsilon}u(1-u)\left(u-\frac{v+b}{a}\right)$$,
+$$f(u,v) = \frac1{\epsilon}u(1-u)\left(u-\frac{v+b}{a}\right)$$
 $$g(u,v) = u - v$$,
 
 where $\epsilon$, $a$, $b$ are constant parameters. For more discussion on the physical meaning of those parameters and the model see [1]. 
