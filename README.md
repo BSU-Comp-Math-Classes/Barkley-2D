@@ -17,6 +17,14 @@ where $\epsilon$, $a$, $b$ are constant parameters. For more discussion on the p
 ## Model set-up
 We will solve the Barkley model on a square domain $(x,y) \in [-L,\ L] \times [-L,\ L]$ and use  the no-flux boundary conditions on all boundaries (i.e. the species cannot escape the square box). The no-flux condition means that on the left and right boundaries we have:
 
+$$\frac{\partial u}{\partial x} = 0$$
+
+and on the top and bottom boundaries we prescribe
+
+$$\frac{\partial u}{\partial y} = 0$$
+
+We will begin the simulation with the two species initially separated and located in the top ($u$) and bottom ($v$) part of the domain:
+
 $$ u(x,y) = \begin{cases}  1& \text{if } y 
 \geq 0 \\ 0 & \text{if } y<0 \end{cases} $$
 
