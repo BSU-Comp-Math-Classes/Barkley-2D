@@ -35,4 +35,27 @@ By default, we will use the parameter values $\epsilon = 0.02$, $a = 0.75$, $b=0
 
 <img width="366" alt="image" src="https://github.com/user-attachments/assets/631f17a2-9e59-4348-9647-f416fc48b9ad" />
 
+## Numerical discretization
+
+We solve the system of equations by first dividing the domain into a set of $N \times N$ elements
+
+<img width="832" alt="image" src="https://github.com/user-attachments/assets/b330a24a-294b-45f7-a33f-6380e2429045" />
+
+and locate the solution variables $u_{i,j}$, $v_{ij}$ inside each of the elements. We then discretize the diffusion operator
+
+$$\nabla^2 u_{i,j} \approx \frac1{\Delta x^2}\left( u_{i-1,j} + u_{i+1,j} + u_{i,j-1} + u_{i,j+1} - 4u_{i,j} \right)$$
+
+where $\Delta x$ is the size of each element.
+
+We use forward Euler explicit time integration (not a good idea in general, but will do for our project), which leads to the following:
+
+$$u_{i,j}^{n+1} = u_{i,j}^{n} + \Delta t \left(f(u_{i,j}^n,\ v_{i,j}^n) + \frac{u_{i-1,j}^n + u_{i+1,j}^n + u_{i,j-1}^n + u_{i,j+1}^n - 4u_{i,j}^n}{\Delta x^2}   \right)$$
+
+$$v_{i,j}^{n+1} = v_{i,j}^{n} + \Delta t\ g(u_{i,j}^n,\ v_{i,j}^n) $$
+
+where superscript $^n$ represents the time at which the solution is evaluated. 
+
+
+
+
 
