@@ -23,8 +23,16 @@ and on the top and bottom boundaries we prescribe
 
 $$\frac{\partial u}{\partial y} = 0$$
 
-We will begin the simulation with the two species initially separated and located in the top ($u$) and bottom ($v$) part of the domain:
+We will begin the simulation with the two species initially distributed only in the top ($u$) and only left ($v$) half of the domain:
 
 $$ u(x,y) = \begin{cases}  1& \text{if } y 
 \geq 0 \newline 0 & \text{if } y<0 \end{cases} $$
+
+$$v(x,y) = \begin{cases}  1& \text{if } x 
+\geq 0 \newline 0 & \text{if } x<0 \end{cases}$$
+
+By default, we will use the parameter values $\epsilon = 0.02$, $a = 0.75$, $b=0.01$ and run the simulation until the final time of 40 s. THe result you should see is quite unexpected, as for this particular choice of parameters, the $u$ species concentration forms a spiral
+
+<img width="366" alt="image" src="https://github.com/user-attachments/assets/631f17a2-9e59-4348-9647-f416fc48b9ad" />
+
 
